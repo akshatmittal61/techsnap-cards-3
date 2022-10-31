@@ -1,0 +1,93 @@
+.cards {
+	width: 100%;
+	margin: 2rem 0;
+}
+.card {
+	width: 90%;
+	height: 28rem;
+	margin: 1rem 0;
+	position: relative;
+	border-radius: 8px;
+	overflow: hidden;
+	border: 4px solid var(--back-shadow);
+	@include respond(tab) {
+		height: 40rem;
+	}
+	&-head {
+		width: 100%;
+		height: 35%;
+		background-image: url(./images/2.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	&-body {
+		width: 100%;
+		height: 50%;
+		padding: 0 0.25rem;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column;
+		& > * {
+			width: 100%;
+			padding: 0.5rem;
+		}
+	}
+	&-title {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-flow: column;
+		& span {
+			&:first-child {
+				font-size: 0.875rem;
+				color: var(--primary);
+			}
+			&:last-child {
+				font-size: 1.25rem;
+				line-height: 1.5rem;
+				font-weight: 700;
+			}
+		}
+	}
+	&-content {
+		font-size: 0.9rem;
+	}
+	&-details {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		& > * {
+			height: 100%;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 0 1rem 0 0;
+			@include respond(tab) {
+				padding: 0 0.5rem 0 0;
+			}
+			& span {
+				&:first-child {
+					width: 1.5rem;
+					height: 1rem;
+					font-size: 1.25rem;
+				}
+			}
+		}
+	}
+	&-updated {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 0.5rem 1rem;
+	}
+	&-foot {
+		width: 100%;
+		height: 15%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
